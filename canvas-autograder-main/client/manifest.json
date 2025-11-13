@@ -1,0 +1,17 @@
+{
+  "manifest_version": 3,
+  "name": "Canvas Autograder",
+  "version": "1.0",
+  "description": "Auto-fills and grades Canvas submission URLs.",
+  "permissions": ["scripting", "storage"],
+  "host_permissions": ["https://*.instructure.com/*"],
+  "content_scripts": [
+    {
+      "matches": ["https://*.instructure.com/*"],
+      "js": ["content.js"]
+    }
+  ],
+  "action": {
+    "default_popup": "index.html"
+  }
+}
